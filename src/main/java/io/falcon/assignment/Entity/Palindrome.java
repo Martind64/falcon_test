@@ -1,6 +1,14 @@
-package io.falcon.assignment.model;
+package io.falcon.assignment.Entity;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
+@Entity
 public class Palindrome {
+
+    @Id
+    @GeneratedValue
     private final long id;
 
     public long getId() {
