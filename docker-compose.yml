@@ -6,8 +6,8 @@ services:
     ports:
       - '8080:8080/tcp'
     depends_on:
-      - db
-  db:
+      - database
+  database:
     image: 'postgres:9.6'
     environment:
       - 'POSTGRES_DB=assignment'
