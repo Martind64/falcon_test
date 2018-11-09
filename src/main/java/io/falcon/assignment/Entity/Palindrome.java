@@ -3,6 +3,7 @@ package io.falcon.assignment.Entity;
 import com.fasterxml.jackson.annotation.JsonFormat;
 
 import javax.persistence.*;
+import java.sql.Timestamp;
 import java.util.Date;
 
 @Entity
@@ -31,16 +32,16 @@ public class Palindrome {
         this.content = content;
     }
 
-    public Date getTimestamp() {
+    public Timestamp getTimestamp() {
         return timestamp;
     }
 
-    public void setTimestamp(Date timestamp) {
+    public void setTimestamp(Timestamp timestamp) {
         this.timestamp = timestamp;
     }
 
     @JsonFormat(pattern = "yyyy-MM-dd' 'HH:mm:ssZ")
-    private Date timestamp;
+    private Timestamp timestamp;
 
     public Palindrome() {
     }
