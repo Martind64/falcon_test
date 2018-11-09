@@ -3,5 +3,5 @@
 --
 CREATE TABLE test (
     id bigint,
-    text character varying(100)
+    content character varying(100)
 );
