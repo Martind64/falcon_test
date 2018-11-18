@@ -1,7 +1,6 @@
 package test;
 
 import io.falcon.assignment.Helper.PalindromeControllerHelper;
-import io.falcon.assignment.PalindromeController;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -41,6 +40,24 @@ public class PalindromeControllerHelperTest {
         boolean result = this.palindromeControllerHelper.isPalindrome("PalAp");
 
         assertTrue(result);
+    }
+
+    @Test
+    public void getLongestPalindrome_palindromeSize6_5(){
+        int result = this.palindromeControllerHelper.getLongestPalindrome("apaapa");
+        assertEquals(6, result);
+    }
+
+    @Test
+    public void getLongestPalindrome_stringAbrakadabra_3(){
+        int result = this.palindromeControllerHelper.getLongestPalindrome("abrakadabra");
+        assertEquals(3, result);
+    }
+
+    @Test
+    public void getLongestPalindrome_stringContaingSpecialChars(){
+        int result = this.palindromeControllerHelper.getLongestPalindrome("?aka.a?");
+        assertEquals(3, result);
     }
 
 
