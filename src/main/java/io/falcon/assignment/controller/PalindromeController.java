@@ -1,9 +1,9 @@
-package io.falcon.assignment;
+package io.falcon.assignment.controller;
 
-import io.falcon.assignment.Entity.Palindrome;
-import io.falcon.assignment.Helper.PalindromeControllerHelper;
-import io.falcon.assignment.Model.ResponsePalindrome;
-import io.falcon.assignment.Repository.PalindromeRepository;
+import io.falcon.assignment.entity.Palindrome;
+import io.falcon.assignment.helper.PalindromeControllerHelper;
+import io.falcon.assignment.model.ResponsePalindrome;
+import io.falcon.assignment.repository.PalindromeRepository;
 import io.vavr.collection.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;

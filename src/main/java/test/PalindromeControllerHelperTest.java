@@ -1,6 +1,6 @@
 package test;
 
-import io.falcon.assignment.Helper.PalindromeControllerHelper;
+import io.falcon.assignment.helper.PalindromeControllerHelper;
 import org.junit.Before;
 import org.junit.Test;
 

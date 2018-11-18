@@ -1,4 +1,4 @@
-package io.falcon.assignment.Entity;
+package io.falcon.assignment.entity;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 

@@ -1,4 +1,4 @@
-package io.falcon.assignment.Model;
+package io.falcon.assignment.model;
 
 import java.sql.Timestamp;
 

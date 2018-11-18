@@ -1,4 +1,4 @@
-package io.falcon.assignment.Helper;
+package io.falcon.assignment.helper;
 
 import org.springframework.stereotype.Component;
 

@@ -1,6 +1,6 @@
-package io.falcon.assignment.Repository;
+package io.falcon.assignment.repository;
 
-import io.falcon.assignment.Entity.Palindrome;
+import io.falcon.assignment.entity.Palindrome;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
