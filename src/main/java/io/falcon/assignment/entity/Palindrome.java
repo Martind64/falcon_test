@@ -38,15 +38,6 @@ public class Palindrome {
         return id;
     }
 
-    @Override
-    public String toString() {
-        return "Palindrome{" +
-                "id=" + id +
-                ", content='" + content + '\'' +
-                ", timestamp=" + timestamp +
-                '}';
-    }
-
     public void setId(long id) {
         this.id = id;
     }
