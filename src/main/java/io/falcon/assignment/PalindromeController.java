@@ -5,11 +5,8 @@ import io.falcon.assignment.Helper.PalindromeControllerHelper;
 import io.falcon.assignment.Model.ResponsePalindrome;
 import io.falcon.assignment.Repository.PalindromeRepository;
 import io.vavr.collection.List;
-import org.apache.tomcat.util.buf.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.Arrays;
 
 @RestController
 public class PalindromeController {
@@ -19,7 +16,6 @@ public class PalindromeController {
 
     @Autowired
     PalindromeControllerHelper palindromeControllerHelper;
-
 
     @PostMapping("/palindrome")
     public Palindrome create(@RequestBody Palindrome pal) {
