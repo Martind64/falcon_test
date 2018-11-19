@@ -6,6 +6,7 @@ import io.falcon.assignment.model.ResponsePalindrome;
 import io.falcon.assignment.repository.PalindromeRepository;
 import io.vavr.collection.List;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.messaging.simp.SimpMessagingTemplate;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -17,8 +18,13 @@ public class PalindromeController {
     @Autowired
     PalindromeControllerHelper palindromeControllerHelper;
 
+    @Autowired
+    private SimpMessagingTemplate template;
+
     @PostMapping("/palindrome")
     public Palindrome create(@RequestBody Palindrome pal) {
+
+        this.template.convertAndSend("/topic/palindrome", pal);
         return palindromeRepository.save(pal);
     }
 
