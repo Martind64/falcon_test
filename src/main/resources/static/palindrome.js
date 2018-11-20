@@ -13,13 +13,35 @@ $(document).ready(function () {
 
             let pal = JSON.parse(palindrome.body);
 
-            $("#content").html("Content: " + pal.content);
-            $("#timestamp").html("Timestamp: " + pal.timestamp);
+
+            $("#palindromes tr:last")
+                .after("" +
+                    "<tr>" +
+                        "<td>" + pal.content + "</td>" +
+                        "<td>" + pal.timestamp + "</td>" +
+                        "<td>" + pal.longest_palindrome_size + "</td>" +
+                    "</tr>" );
+
+
+            // var listItem = document.createElement("li");
+            // listItem.className = "list-group-item";
+            // listItem.textContent = "Text: " + pal.content + " created at: " + pal.timestamp;
+
+            // ul.appendChild(listItem);
+
+
+            // $("#content").html("Content: " + pal.content);
+            // $("#timestamp").html("Timestamp: " + pal.timestamp);
 
         })
 
     },onError())
+
+    // $(function () {
+    //     $('[data-toggle="tooltip"]').tooltip()
+    // })
 });
+
 
 function onError(){
     console.log("Error when connecting to the websocket");

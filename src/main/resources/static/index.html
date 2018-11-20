@@ -12,21 +12,27 @@
 </head>
 <body>
 <div class="container">
+    <div class="jumbotron">
+        <h1 class="display-4">Hello there Falcon!</h1>
+        <p class="lead">This page will through websocket magic, receive a newly inserted palindrome and display it in the table below</p>
+    </div>
     <div class="row">
-        <div class="col"></div>
+
         <div class="col">
-            <table class="table">
-                <tbody>
-                <tr>
-                    <td id="content">Content: </td>
-                    <td id="timestamp">Timestamp: </td>
-                </tr>
-                </tbody>
+            <table class="table" id="palindromes">
+                <thead>
+                    <tr>
+                        <th>Text</th>
+                        <th>Timestamp</th>
+                        <th>LongestPalindrome</th>
+                    </tr>
+                </thead>
             </table>
         </div>
-        <div class="col"></div>
     </div>
+
 </div>
 <script src="palindrome.js"></script>
+
 </body>
 </html>

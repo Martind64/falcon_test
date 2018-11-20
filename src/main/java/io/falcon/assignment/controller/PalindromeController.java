@@ -24,7 +24,12 @@ public class PalindromeController {
     @PostMapping("/palindrome")
     public Palindrome create(@RequestBody Palindrome pal) {
 
-        this.template.convertAndSend("/topic/palindrome", pal);
+        ResponsePalindrome palin = new ResponsePalindrome();
+        palin.setContent(pal.getContent());
+        palin.setTimestamp(pal.getTimestamp());
+        palin.setLongest_palindrome_size(palindromeControllerHelper.getLongestPalindrome(pal.getContent()));
+
+        this.template.convertAndSend("/topic/palindrome", palin);
         return palindromeRepository.save(pal);
     }
 
