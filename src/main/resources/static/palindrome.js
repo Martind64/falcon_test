@@ -13,7 +13,6 @@ $(document).ready(function () {
 
             let pal = JSON.parse(palindrome.body);
 
-
             $("#palindromes tr:last")
                 .after("" +
                     "<tr>" +
@@ -21,25 +20,8 @@ $(document).ready(function () {
                         "<td>" + pal.timestamp + "</td>" +
                         "<td>" + pal.longest_palindrome_size + "</td>" +
                     "</tr>" );
-
-
-            // var listItem = document.createElement("li");
-            // listItem.className = "list-group-item";
-            // listItem.textContent = "Text: " + pal.content + " created at: " + pal.timestamp;
-
-            // ul.appendChild(listItem);
-
-
-            // $("#content").html("Content: " + pal.content);
-            // $("#timestamp").html("Timestamp: " + pal.timestamp);
-
         })
-
     },onError())
-
-    // $(function () {
-    //     $('[data-toggle="tooltip"]').tooltip()
-    // })
 });
 
 
