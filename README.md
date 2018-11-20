@@ -3,7 +3,7 @@ README
 
 [Requirements](Requirements.md)
 
-## The Enterprise Palindrome App
+## TEPA - The Enterprise Palindrome Application
 
 This application consists of an api and a view.
 
