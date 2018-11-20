@@ -3,9 +3,11 @@ README
 
 [Requirements](Requirements.md)
 
-## Palindrome API
+## The Enterprise Palindrome App
 
-This application is an api that is able to calculate the longest palindrome within a string.
+This application consists of an api and a view.
+
+It is able to calculate the longest palindrome within a string  and save the string to the database while simultaneously displaying the posted data in a view.
 
 
 #### Running the application
