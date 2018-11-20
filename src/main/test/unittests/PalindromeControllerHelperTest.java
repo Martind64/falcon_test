@@ -43,26 +43,26 @@ public class PalindromeControllerHelperTest {
     }
 
     @Test
-    public void isPalindrome_stringContainingLessThanthreeLetters_false(){
+    public void isPalindrome_stringContainingLessThanThreeLetters_false(){
         boolean result = this.palindromeControllerHelper.isPalindrome("aa");
 
         assertFalse(result);
     }
 
     @Test
-    public void getLongestPalindrome_palindromeSize6_5(){
+    public void getLongestPalindrome_palindromeSize6_lengthIs5(){
         int result = this.palindromeControllerHelper.getLongestPalindrome("apaapa");
         assertEquals(6, result);
     }
 
     @Test
-    public void getLongestPalindrome_stringAbrakadabra_3(){
+    public void getLongestPalindrome_stringAbrakadabra_lengthIs3(){
         int result = this.palindromeControllerHelper.getLongestPalindrome("abrakadabra");
         assertEquals(3, result);
     }
 
     @Test
-    public void getLongestPalindrome_stringContaingSpecialChars_3(){
+    public void getLongestPalindrome_stringContaingSpecialChars_lengthIs3(){
         int result = this.palindromeControllerHelper.getLongestPalindrome("?aka.a?");
         assertEquals(3, result);
     }
