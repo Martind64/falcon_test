@@ -43,7 +43,7 @@ public class PalindromeControllerHelperTest {
     }
 
     @Test
-    public void isPalindrome_stringContainingLessThanFreeLetters_false(){
+    public void isPalindrome_stringContainingLessThanthreeLetters_false(){
         boolean result = this.palindromeControllerHelper.isPalindrome("aa");
 
         assertFalse(result);
