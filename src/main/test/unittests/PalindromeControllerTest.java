@@ -38,13 +38,12 @@ public class PalindromeControllerTest {
     @InjectMocks
     private PalindromeController palindromeController;
 
-
     @Test
     public void getAll_methodCalled_returnedListHasLongestPalindrome3() throws Exception {
-        Iterable<Palindrome> returnedPalindromes = this.getPalindromeList();
-
         HttpHeaders headers = new HttpHeaders();
         headers.setContentType(MediaType.APPLICATION_JSON);
+
+        Iterable<Palindrome> returnedPalindromes = this.getPalindromeList();
 
         Mockito.when(palindromeRepository.findAll()).thenReturn(returnedPalindromes);
 
@@ -97,5 +96,4 @@ public class PalindromeControllerTest {
             add(palindrome);
         }};
     }
-
 }
