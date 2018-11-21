@@ -4,6 +4,7 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 import io.vavr.match.annotation.Patterns;
 
 import javax.persistence.*;
+import javax.validation.constraints.Min;
 import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 import java.sql.Timestamp;
@@ -17,10 +18,10 @@ public class Palindrome {
     @GeneratedValue
     private long id;
 
+    @Size(min = 3, message = "content has to be at least 3 characters")
     private String content;
 
     @JsonFormat(pattern = "yyyy-MM-dd' 'HH:mm:ssZ")
-//    @Pattern(regexp = )
     private ZonedDateTime timestamp;
 
     public String getContent() {

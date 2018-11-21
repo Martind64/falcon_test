@@ -40,22 +40,8 @@ public class PalindromeControllerTest {
 
 
     @Test
-    public void getAll_methodCalled_returnedObjectHasLongestPalindrome3() throws Exception {
-
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ssZ");
-
-        ZonedDateTime datetime = ZonedDateTime.parse("2018-10-09 19:36:12+0000", formatter);
-
-        Palindrome palindrome = new Palindrome();
-
-        palindrome.setId(10);
-        palindrome.setContent("abrakadabra");
-        palindrome.setTimestamp(datetime);
-
-        Iterable returnedPalindromes = new ArrayList<Palindrome>() {{
-            add(palindrome);
-            add(palindrome);
-        }};
+    public void getAll_methodCalled_returnedListHasLongestPalindrome3() throws Exception {
+        Iterable<Palindrome> returnedPalindromes = this.getPalindromeList();
 
         HttpHeaders headers = new HttpHeaders();
         headers.setContentType(MediaType.APPLICATION_JSON);
@@ -76,5 +62,40 @@ public class PalindromeControllerTest {
         Assert.assertEquals(3, expected.intValue());
     }
 
+    @Test
+    public void getAll_methodCalled_returnedListHas2Elements() throws Exception {
+        HttpHeaders headers = new HttpHeaders();
+        headers.setContentType(MediaType.APPLICATION_JSON);
+
+        Iterable<Palindrome> returnedPalindromes = this.getPalindromeList();
+
+        Mockito.when(palindromeRepository.findAll()).thenReturn(returnedPalindromes);
+
+        ResponseEntity<List<ResponsePalindrome>> result = restTemplate.exchange(
+                "/palindrome",
+                HttpMethod.GET,
+                new HttpEntity<>(null, headers),
+                new ParameterizedTypeReference<List<ResponsePalindrome>>() {}
+        );
+
+        List<ResponsePalindrome> body = result.getBody();
+
+        Assert.assertEquals(2, body.length());
+    }
+
+    private Iterable<Palindrome> getPalindromeList(){
+        Palindrome palindrome = new Palindrome();
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ssZ");
+        ZonedDateTime datetime = ZonedDateTime.parse("2018-10-09 19:36:12+0000", formatter);
+
+        palindrome.setId(10);
+        palindrome.setContent("abrakadabra");
+        palindrome.setTimestamp(datetime);
+
+        return new ArrayList<Palindrome>() {{
+            add(palindrome);
+            add(palindrome);
+        }};
+    }
 
 }
