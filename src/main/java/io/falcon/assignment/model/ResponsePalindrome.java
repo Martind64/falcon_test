@@ -1,12 +1,18 @@
 package io.falcon.assignment.model;
 
-import java.sql.Timestamp;
-
 public class ResponsePalindrome {
 
     private String content;
 
-    private Timestamp timestamp;
+    public String getTimestamp() {
+        return timestamp;
+    }
+
+    public void setTimestamp(String timestamp) {
+        this.timestamp = timestamp;
+    }
+
+    private String timestamp;
 
     public String getContent() {
         return content;
@@ -16,13 +22,6 @@ public class ResponsePalindrome {
         this.content = content;
     }
 
-    public Timestamp getTimestamp() {
-        return timestamp;
-    }
-
-    public void setTimestamp(Timestamp timestamp) {
-        this.timestamp = timestamp;
-    }
 
     public Integer getLongest_palindrome_size() {
         return longest_palindrome_size;

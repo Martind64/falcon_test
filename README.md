@@ -41,9 +41,9 @@ Post request example
 ```
 The timestamp in the model is a custom timestamp containing a mix of the ISO 8601 and RFC 822 standard
 
-iso 8601 = 2018-10-09 00:12:12
+ISO 8601 = 2018-10-09 00:12:12
 
-rfc 822 = +0100
+RFC 822 = +0100
 
 #### Test Suite
 Tests are located under src/main/test

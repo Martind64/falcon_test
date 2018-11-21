@@ -12,7 +12,7 @@ public class PalindromeControllerHelper {
     public boolean isPalindrome(String palindrome){
         // Only alphabetical characters are considered
         if (!palindrome.matches("[a-zA-Z]+")) return false;
-        // Only words longer than 3 characters are considered Palindromes
+        // Only words longer than 3 characters are considered
         if (palindrome.length() < 3) return false;
 
         palindrome = palindrome.toLowerCase();
