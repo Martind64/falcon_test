@@ -3,6 +3,8 @@ package io.falcon.assignment.model;
 public class ResponsePalindrome {
 
     private String content;
+    private Integer longest_palindrome_size;
+    private String timestamp;
 
     public String getTimestamp() {
         return timestamp;
@@ -12,8 +14,6 @@ public class ResponsePalindrome {
         this.timestamp = timestamp;
     }
 
-    private String timestamp;
-
     public String getContent() {
         return content;
     }
@@ -21,7 +21,6 @@ public class ResponsePalindrome {
     public void setContent(String content) {
         this.content = content;
     }
-
 
     public Integer getLongest_palindrome_size() {
         return longest_palindrome_size;
@@ -31,5 +30,4 @@ public class ResponsePalindrome {
         this.longest_palindrome_size = longest_palindrome_size;
     }
 
-    private Integer longest_palindrome_size;
 }
